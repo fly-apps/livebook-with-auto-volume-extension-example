@@ -14,3 +14,9 @@ The magic comes from the fields called `auto_extend_*` under your mounts section
 ```
 
 https://github.com/fly-apps/livebook-with-auto-volume-extension-example/blob/d5dd0d8a6921d7a05e36ab6eb20a31f275996de9/fly.toml#L22-L24
+
+## How to quickly test this?
+
+Clone this repo the `fly launch` it. Choose to copy the configs and you should be good to go.
+
+Do something to make your volume usage at least `auto_extend_size_threshold`% such as `fallocate -l [SIZE]MB /data/test` (change `[SIZE]` depending on your volume size).
